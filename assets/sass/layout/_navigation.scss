@@ -1,0 +1,48 @@
+.nav {
+    width: 95%;
+    padding: 0.625em;
+    border-bottom: 1px solid gray;
+    margin: 0 auto;
+    @include respond-to('medium') {
+        width: 90%;
+    }
+    @include respond-to('lg') {
+        width: 80%;
+    }
+    .nav__logo {
+        font-size: $large;
+        font-weight: bold;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        padding-top: 0.35em;
+    }
+    .nav__menu {
+        box-sizing: border-box;
+        text-align: right;
+    }
+}
+
+.nav__menu .nav__menu-items .nav__item {
+    display: inline-block;
+    list-style-type: none;
+    box-sizing: border-box;
+    &:first-child {
+        display: none;
+        @include respond-to('medium') {
+            display: inline;
+        }
+    }
+    @include respond-to('sm') {
+        padding-left: 0.5em;
+    }
+    .nav__item-input {
+        padding-left: 0.5em;
+    }
+}
+
+.nav__menu .nav__menu-items .nav__item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $medium;
+    color: $steel-blue;
+}
